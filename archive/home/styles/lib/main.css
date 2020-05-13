@@ -1,0 +1,201 @@
+@import './reset.css';
+@import './sakura.css';
+@import './user.css';
+@import './yaml.css';
+@import './pref.css';
+
+html {
+    font-size: 62.5%;
+    font-family: 'Avenir', Robot, sans-serif;
+    font-weight: 300;
+    position: relative;
+    min-height: 100%;
+}
+
+:root {
+    --light-color: #4a4a4a;
+    --light-background-color: #eee;
+    --dark-color: #bfbfbf;
+    --dark-background-color: #333;
+}
+
+:root {
+    --color: var(--light-color);
+    --background-color: var(--light-background-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --color: var(--dark-color);
+        --background-color: var(--dark-background-color);
+    }
+}
+
+html[data-site-pref*='theme:dark'] body {
+    --color: var(--dark-color);
+    --background-color: var(--dark-background-color);
+}
+
+html[data-site-pref*='theme:light'] body {
+    --color: var(--light-color);
+    --background-color: var(--light-background-color);
+}
+
+html[data-site-pref*='markdown:true'] * {
+    --use-markdown: true;
+}
+
+html[data-site-pref*='markdown:true'] body {
+    --markdown-h1-content: '# ';
+    --markdown-h2-content: '## ';
+    --markdown-h3-content: '### ';
+    --markdown-h4-content: '#### ';
+    --markdown-h5-content: '##### ';
+    --markdown-h6-content: '###### ';
+}
+
+.block {
+    background-position: calc(
+            150px * var(--var-eq-two) + 4px * (1 - var(--var-eq-two))
+        )
+        8px;
+}
+
+h1::before {
+    content: var(--markdown-h1-content);
+}
+
+h2::before {
+    content: var(--markdown-h2-content);
+}
+h3::before {
+    content: var(--markdown-h3-content);
+}
+h4::before {
+    content: var(--markdown-h4-content);
+}
+h5::before {
+    content: var(--markdown-h5-content);
+}
+h6::before {
+    content: var(--markdown-h6-content);
+}
+
+body {
+    font-size: max(2vmin, 1.8rem);
+    line-height: 1.618;
+    max-width: 38em;
+    margin: auto;
+    color: var(--color);
+    background-color: var(--background-color);
+    padding: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.1;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    font-size-adjust: 0.6;
+}
+
+h1 {
+    font-size: 2.35em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.75em;
+}
+h4 {
+    font-size: 1.5em;
+}
+h5 {
+    font-size: 1.25em;
+}
+h6 {
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1.5px solid #4a4a4a88;
+    color: var(--color);
+    /* color: #2c8898; */
+}
+
+a:hover {
+    /* color: #982c61; */
+    border-bottom: 2px solid #4a4a4a;
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        font-size: 2rem;
+    }
+}
+
+label.dropdown {
+    display: block;
+    /* position: relative; */
+    cursor: pointer;
+    user-select: none;
+}
+
+label.dropdown > input {
+    display: none;
+}
+
+label > div {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+label > input:checked ~ div {
+    display: block;
+}
+
+* {
+    border: 0;
+}
+
+.preference > li {
+    list-style: none;
+}
+
+toggle-pref {
+    display: list-item;
+    list-style-type: disc;
+}
+toggle-pref label {
+    cursor: pointer;
+}
+toggle-pref input {
+    display: none;
+}
+
+html[data-site-pref*='theme:light']
+    *[data-support-pref*='theme:']:not([data-support-pref*=':dark']) {
+    display: none;
+}
+
+html[data-site-pref*='markdown:true'] code::before,
+html[data-site-pref*='markdown:true'] code::after {
+    content: '```';
+    display: block;
+}

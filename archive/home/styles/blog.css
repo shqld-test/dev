@@ -1,0 +1,39 @@
+code {
+    color: #7f7f7f;
+    /* color: #91c5d3; */
+    font-weight: bold;
+    padding: 0;
+}
+pre {
+    padding: 16px;
+    background: #282c35;
+    color: white;
+}
+pre code {
+    font-weight: normal;
+    color: white;
+    display: inline-block;
+    font-family: monospace;
+    /* line-height: 1; */
+}
+.t.k {
+    color: #7f7f7f;
+}
+.t.l {
+    color: #91c5d3;
+}
+.t.s {
+    color: #a9cfa4;
+}
+.t.b {
+    color: #9fbadd;
+}
+.t.f {
+    color: #e1b5bb;
+}
+.t.o {
+    color: #ffe2a9;
+}
+.t.p {
+    color: lightgray;
+}

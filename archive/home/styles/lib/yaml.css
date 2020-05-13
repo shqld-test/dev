@@ -1,0 +1,26 @@
+.yaml {
+    font-family: monospace, serif;
+    margin-left: -40px;
+}
+.yaml ul {
+    padding-left: 0;
+    margin-left: 40px;
+}
+.yaml ul,
+.yaml li {
+    margin-bottom: 0;
+}
+.yaml li::before {
+    content: '- ';
+}
+.yaml dl {
+    padding-left: 0;
+    margin-left: 40px;
+}
+.yaml dt,
+.yaml dd {
+    display: inline;
+}
+.yaml dt:after {
+    content: ': ';
+}

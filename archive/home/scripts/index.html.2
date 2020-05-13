@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1"
+        />
+        <title>shqld.dev</title>
+        <script>
+            if (process.env.NODE_ENV !== 'production') performance.mark('a')
+
+            var pref = sessionStorage.getItem('site-pref')
+            if (pref)
+                document.documentElement.setAttribute('data-site-pref', pref)
+
+            if (process.env.NODE_ENV !== 'production') performance.mark('b')
+        </script>
+        <!-- <link rel="stylesheet" href="/reset.css" type="text/css" /> -->
+        <!-- <link rel="stylesheet" href="/main.css" type="text/css" /> -->
+        <!-- <link rel="stylesheet" href="/sakura.css" type="text/css" /> -->
+        <!-- <link rel="stylesheet" href="/user.css" type="text/css" /> -->
+        <!-- <link rel="stylesheet" href="/yaml.css" type="text/css" /> -->
+        <link rel="stylesheet" href="/styles.css" type="text/css" />
+        <script type="application/ld+json"></script>
+    </head>
+    <body>
+        <main>
+            <h1>
+                <a href="/" class="mono">
+                    shqld.dev
+                </a>
+            </h1>
+
+            <div class="yaml">
+                ---
+                <br />
+
+                <dl>
+                    <dt>about_me</dt>
+                    <dd>
+                        <dl>
+                            <div>
+                                <dt>name</dt>
+                                <dd>Sho Miyamoto</dd>
+                            </div>
+                            <div>
+                                <dt>job</dt>
+                                <dd>Web Developer</dd>
+                            </div>
+                            <div>
+                                <dt>industry</dt>
+                                <dd>News Media</dd>
+                            </div>
+                            <br />
+                            <div>
+                                <a
+                                    href="https://github.com/shqld"
+                                    target="_blank"
+                                    referrerpolicy="no-referrer"
+                                    rel="noopener"
+                                >
+                                    <dt>github</dt>
+                                    <dd>"shqld"</dd>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a
+                                    href="https://twitter.com/webseals"
+                                    target="_blank"
+                                    referrerpolicy="no-referrer"
+                                    rel="noopener"
+                                >
+                                    <dt>twitter</dt>
+                                    <dd>"webseals"</dd>
+                                </a>
+                            </div>
+                        </dl>
+                    </dd>
+
+                    <br />
+
+                    <dl style="margin-left: 0;">
+                        <dt>contents</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    To Be Determined
+                                </li>
+                                <!-- <li>
+                                    <a href="//blog.shomiyamoto.dev">blog</a>
+                                </li>
+                                <li>
+                                    <a href="//lab.shomiyamoto.dev">lab</a>
+                                </li> -->
+                                <!-- https://github.com/shqld?tab=repositories -->
+                            </ul>
+                        </dd>
+                    </dl>
+                </dl>
+            </div>
+        </main>
+
+        <!-- <aside>
+            ------------------------
+            <br />
+            <a href="/preference" style="font-family: monospace;">
+                configurePreferences();
+            </a>
+        </aside> -->
+    </body>
+</html>

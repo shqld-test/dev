@@ -1,0 +1,60 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    line-height: 1.5em;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+}
+.title a {
+    border-bottom: 0;
+}
+
+.logo {
+    height: 12em;
+    width: 12em;
+    background-image: url(@shqld.dev/assets/images/shqld.mini.webp);
+    background-size: contain;
+    clip-path: circle(at center);
+}
+
+.under_construction {
+    text-decoration: line-through;
+}
+
+.under_construction::after {
+    display: inline-block;
+    text-decoration: dashed;
+    margin: 0 0.5em;
+    content: '(🚧 under construction)';
+    font-size: 0.6em;
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        flex-direction: column-reverse;
+    }
+    .article {
+        align-items: center;
+    }
+    .title {
+        margin-top: 0.5em;
+    }
+    .logo {
+        height: 200px;
+        width: 200px;
+        background-image: url(@shqld.dev/assets/images/shqld.tiny.webp);
+    }
+}

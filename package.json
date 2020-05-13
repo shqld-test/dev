@@ -1,0 +1,47 @@
+{
+    "name": "shqld.dev",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "UNLINCENSED",
+    "private": true,
+    "workspaces": [
+        "assets"
+    ],
+    "scripts": {
+        "start": "node --enable-source-maps build/main.js",
+        "start:dry-run": "npm run start -- --dry-run",
+        "build": "webpack-cli",
+        "dev:build": "BUILD_ENV=development webpack-cli",
+        "dev:watch": "npm run dev:build -- --watch"
+    },
+    "dependencies": {
+        "@linaria/core": "^3.0.0-beta.4",
+        "@shqld.dev/assets": "0.0.1",
+        "bulma": "^0.9.3",
+        "fastify": "^3.18.1",
+        "fastify-static": "^4.2.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.6",
+        "@babel/plugin-syntax-top-level-await": "^7.14.5",
+        "@babel/preset-react": "^7.14.5",
+        "@babel/preset-typescript": "^7.14.5",
+        "@linaria/babel-preset": "^3.0.0-beta.4",
+        "@linaria/react": "^3.0.0-beta.7",
+        "@linaria/shaker": "^3.0.0-beta.7",
+        "@linaria/webpack-loader": "^3.0.0-beta.7",
+        "@types/react-dom": "^17.0.8",
+        "@types/react-helmet": "^6.1.2",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^5.2.6",
+        "eslint-plugin-lit-a11y": "^1.0.1",
+        "mini-css-extract-plugin": "^2.0.0",
+        "nodemon-webpack-plugin": "^4.5.2",
+        "typescript": "^4.3.5",
+        "webpack": "^5.41.1",
+        "webpack-cli": "^4.7.2",
+        "webpack-node-externals": "^3.0.0"
+    }
+}

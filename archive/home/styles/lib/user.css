@@ -1,0 +1,82 @@
+html {
+    font-size: 75%;
+}
+
+.mono * {
+    font-family: monospace, serif;
+}
+
+body {
+    --sp-c: #4a4a4a;
+    --sp-bc: #eee;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --sp-c: #bfbfbf;
+        --sp-bc: #333;
+    }
+}
+
+body {
+    color: var(--sp-c);
+    background-color: var(--sp-bc);
+}
+
+html[data-sp*='"theme":"dark"'] > body {
+    --sp-c: #bfbfbf;
+    --sp-bc: #333;
+}
+
+html[data-sp*='"theme":"light"'] > body {
+    --sp-c: #4a4a4a;
+    --sp-bc: #eee;
+}
+
+html[data-sp*='"md":"true"'] body {
+    --sp-mh1: '# ';
+    --sp-mh2: '## ';
+    --sp-mh3: '### ';
+    --sp-mh4: '#### ';
+    --sp-mh5: '##### ';
+    --sp-mh6: '###### ';
+}
+
+.chunks > * {
+    display: inline-block;
+}
+
+h1 {
+    margin-top: 2rem;
+}
+h1::before {
+    font-family: initial;
+    white-space: nowrap;
+    font-size: 0.75em;
+    content: var(--sp-mh1);
+}
+h2::before {
+    font-family: initial;
+    white-space: nowrap;
+    font-size: 0.75em;
+    content: var(--sp-mh2);
+}
+h3::before {
+    white-space: nowrap;
+    font-size: 0.75em;
+    content: var(--sp-mh3);
+}
+h4::before {
+    white-space: nowrap;
+    font-size: 0.75em;
+    content: var(--sp-mh4);
+}
+h5::before {
+    white-space: nowrap;
+    font-size: 0.75em;
+    content: var(--sp-mh5);
+}
+h6::before {
+    white-space: nowrap;
+    font-size: 0.75em;
+    content: var(--sp-mh6);
+}

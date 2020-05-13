@@ -1,0 +1,9 @@
+{
+    "name": "@shqld.dev/home",
+    "private": true,
+    "version": "0.0.1",
+    "main": "src/index.js",
+    "dependencies": {
+        "@shqld.dev/assets": "0.0.1"
+    }
+}

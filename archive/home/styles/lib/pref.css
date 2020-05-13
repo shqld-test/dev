@@ -1,0 +1,11 @@
+toggle-pref label {
+    display: inline;
+}
+
+toggle-pref input {
+    vertical-align: -10%;
+}
+
+toggle-pref input + span {
+    margin-left: 5px;
+}
