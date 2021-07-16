@@ -41,13 +41,10 @@ jobs:
                   yarn install --production
             - name: Build docker image
               run: |
-                  docker build \
-                    -t docker.pkg.github.com/${{ github.repository }}/app:${{ github.sha }} \
-                    -t docker.pkg.github.com/${{ github.repository }}/app:latest \
-                    .
+                  docker build -t docker.pkg.github.com/${{ github.repository }}/app:latest -t docker.pkg.github.com/${{ github.repository }}/app:${{ github.sha }} .
             - name: Dry run application
               run: |
                   docker run -e DRY_RUN=true docker.pkg.github.com/${{ github.repository }}/app:${{ github.sha }}
             - name: Push docker image to Github Package Registry
               run: |
-                  docker push docker.pkg.github.com/${{ github.repository }}/app
+                  docker push docker.pkg.github.com/${{ github.repository }}/app:${{ github.sha }}

@@ -41,6 +41,13 @@ server.get('/', (_, res) => {
     res.type('text/html').send(html)
 })
 
+server.get('/test', (_, res) => {
+    res.send('hello')
+})
+server.get('/test2', (_, res) => {
+    res.send('hello2')
+})
+
 await server.ready()
 
 const port = Number(process.env['PORT']) || 3000
