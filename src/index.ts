@@ -6,6 +6,8 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { Entry } from './components/Entry'
 import { Head } from './components/Head'
 
+
+
 const server = fastify()
 
 server.register((f, _opts, done) => {
