@@ -42,7 +42,7 @@ server.get('/', (_, res) => {
 })
 
 server.get('/test', (_, res) => {
-    res.send('hello')
+    res.send('hello world')
 })
 server.get('/test2', (_, res) => {
     res.send('hello2')
